@@ -7,15 +7,15 @@ body {
 }
 
 body.rainy {
-  background-image: url("images/rainy-bg.jpg");
+  background-image: url("images/rainy.jpg");
 }
 
 body.sunny {
-  background-image: url("images/sunny-bg.jpg");
+  background-image: url("images/sunny.jpg");
 }
 
 body.cloudy {
-  background-image: url("images/cloudy-bg.jpg");
+  background-image: url("images/cloudy.jpg");
 }
 
 .weather-app-container {
