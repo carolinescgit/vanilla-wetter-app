@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather App Coded By Caroline Schor</title>
   </head>
-  <body>
+  <body class="cloudy">
+    <div class="weather-app-container">
+      <div class="weather">
     <header>
+        <a href="https://www.shecodes.io/" target="blank"> <img class="logo" alt="SheCodes Logo" src="source/logo.png"></a>
       <form>
         <input
           type="search"
           name=""
-          id=""
+          id="city"
           placeholder="Enter a city..."
           required
         />
@@ -19,7 +23,8 @@
       </form>
     </header>
     <main>
-      <div>
+        <div class="current-weather">
+        <div class="weather-data-left">
         <h1>London</h1>
         <p>
           Friday 09:45 overcast clouds
@@ -27,7 +32,9 @@
           Humidty:66%, Wind: 3.13km/h
         </p>
       </div>
-      <div>⛅ 12°C</div>
+    <div class="weather-temp-right">⛅ 12°C</div>
+    </div>
+</div>
     </main>
     <footer>
       Coded by

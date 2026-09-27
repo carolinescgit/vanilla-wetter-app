@@ -1,0 +1,67 @@
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body.rainy {
+  background-image: url("images/rainy-bg.jpg");
+}
+
+body.sunny {
+  background-image: url("images/sunny-bg.jpg");
+}
+
+body.cloudy {
+  background-image: url("images/cloudy-bg.jpg");
+}
+
+.weather-app-container {
+}
+
+.weather .logo {
+}
+
+.weather {
+}
+
+#city {
+}
+
+#city::placeholder {
+}
+
+#city:focus {
+}
+
+input[type="submit"] {
+}
+
+input[type="submit"] {
+}
+
+.weather h1 {
+}
+
+.weather ul {
+}
+
+.weather li {
+}
+
+.weather li strong {
+}
+
+.current-weather {
+}
+
+.weather-temp-right {
+}
+
+.weather footer {
+}
+
+.weather footer a {
+}
