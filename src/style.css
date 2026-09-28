@@ -4,6 +4,10 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 body.rainy {
@@ -19,12 +23,22 @@ body.cloudy {
 }
 
 .weather-app-container {
-}
-
-.weather .logo {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
 }
 
 .weather {
+  background: rgba(30, 30, 40, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+
+.weather .logo {
 }
 
 #city {
