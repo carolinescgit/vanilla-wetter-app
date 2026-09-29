@@ -24,7 +24,7 @@ body.cloudy {
 
 .weather-app-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   padding: 20px;
 }
 
@@ -38,44 +38,102 @@ body.cloudy {
   color: #ffffff;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+  gap: 15px;
+}
+
 .weather .logo {
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 #city {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
 }
 
 #city::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 #city:focus {
+  border-color: #8a70ff;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 input[type="submit"] {
-}
-
-input[type="submit"] {
-}
-
-.weather h1 {
-}
-
-.weather ul {
-}
-
-.weather li {
-}
-
-.weather li strong {
+  background-color: #8a70ff !important;
+  color: white !important;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .current-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.weather h1 {
+  margin: 0 0 10px 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.weather-data-left p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .weather-temp-right {
+  font-size: 64px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .weather footer {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
 }
 
 .weather footer a {
+  color: #a393ff;
+  text-decoration: none;
+}
+
+.weather footer a:hover {
+  text-decoration: underline;
 }
