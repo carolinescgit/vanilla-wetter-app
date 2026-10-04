@@ -12,11 +12,7 @@ function searchCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city");
 
-  console.log(cityInput.value);
-  let cityElement = document.querySelector("#city-heading");
-  cityElement.innerHTML = cityInput.value;
-
-  getWeather(cityInput.value);
+  getWeather(cityInput.value.trim());
 }
 
 let searchFormElement = document.querySelector("#search-form");
@@ -25,8 +21,15 @@ searchFormElement.addEventListener("submit", searchCity);
 // Callback function display the weather data response
 
 function displayWeather(response) {
+  let cityElement = document.querySelector("#city-heading");
+  cityElement.innerHTML = response.data.city;
+
+  //Update temperature
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 
-  console.log(response.data.temperature.current);
+  console.log(response.data);
 }
+
+// Default city set to Paris
+getWeather("Paris");
