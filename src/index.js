@@ -26,6 +26,20 @@ function displayWeather(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
 
+  //Change background image dependeing on weather
+
+  let weatherDescription = response.data.condition.description.toLowerCase();
+
+  if (weatherDescription.includes("rain")) {
+    document.body.className = "rainy";
+  } else if (weatherDescription.includes("cloud")) {
+    document.body.className = "clouds";
+  } else if (weatherDescription.includes("clear sky")) {
+    document.body.className = "clear-sky";
+  } else {
+    document.body.className = "cloudy";
+  }
+
   console.log(response.data);
 }
 

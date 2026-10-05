@@ -14,11 +14,11 @@ body.rainy {
   background-image: url("images/rainy.jpg");
 }
 
-body.sunny {
+body.clear-sky {
   background-image: url("images/sunny.jpg");
 }
 
-body.cloudy {
+body.clouds {
   background-image: url("images/cloudy.jpg");
 }
 
