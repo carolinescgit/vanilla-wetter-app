@@ -126,6 +126,11 @@ input[type="submit"] {
   gap: 8px;
 }
 
+.temp-right-icon {
+  width: 88px;
+  height: 88px;
+}
+
 .weather footer {
   text-align: center;
   font-size: 12px;

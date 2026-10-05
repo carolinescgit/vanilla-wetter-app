@@ -16,8 +16,10 @@ function displayWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
