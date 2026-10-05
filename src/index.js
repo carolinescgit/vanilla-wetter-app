@@ -6,7 +6,49 @@ function getWeather(city) {
   axios.get(apiURL).then(displayWeather);
 }
 
-// Form submission handling
+// Callback function display the weather data response
+
+function displayWeather(response) {
+  let cityElement = document.querySelector("#city-heading");
+  let temperatureElement = document.querySelector("#temperature");
+  let timeElement = document.querySelector("#time");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let date = new Date(response.data.time * 1000);
+
+  cityElement.innerHTML = response.data.city;
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  timeElement.innerHTML = formatDate(date);
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windElement.innerHTML = `${response.data.wind.speed} km/h`;
+
+  console.log(response.data);
+}
+
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day} ${hours}:${minutes}`;
+}
+
+// Form submission handling - event handlers
 
 function searchCity(event) {
   event.preventDefault();
@@ -15,21 +57,10 @@ function searchCity(event) {
   getWeather(cityInput.value.trim());
 }
 
+// Event listeners
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchCity);
 
-// Callback function display the weather data response
-
-function displayWeather(response) {
-  let cityElement = document.querySelector("#city-heading");
-  cityElement.innerHTML = response.data.city;
-
-  //Update temperature
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
-
-  console.log(response.data);
-}
-
-// Default city set to Paris
+// Initial pageload
 getWeather("Paris");
