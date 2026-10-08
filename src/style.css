@@ -131,6 +131,48 @@ input[type="submit"] {
   height: 88px;
 }
 
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.weather-forecast-day {
+  text-align: center;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 10px;
+}
+
+.weather-forecast-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-temp {
+  font-size: 16px;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.weather-forecast-temp-min {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.weather-forecast-temp-max {
+  font-weight: bold;
+}
+
 .weather footer {
   text-align: center;
   font-size: 12px;
