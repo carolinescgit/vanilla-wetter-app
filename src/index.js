@@ -78,5 +78,31 @@ function searchCity(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchCity);
 
+// Forecast template
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+            <div class="weather-forecast-icon">☁</div>
+            <div class="weather-forecast-temp">
+                <div class="weather-forecast-temp-min">15°C </div>
+                <div class="weather-forecast-temp-max"> 19°C</div>
+              </div>
+            </div>
+            `;
+  });
+
+  forecastElement.innerHTML = forecastHtml;
+}
+
 // Initial pageload
 getWeather("Paris");
+displayForecast();
