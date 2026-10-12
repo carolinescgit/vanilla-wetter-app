@@ -125,3 +125,5 @@ searchFormElement.addEventListener("submit", searchCity);
 
 // Initial pageload
 getWeather("Paris");
+
+// finished.
