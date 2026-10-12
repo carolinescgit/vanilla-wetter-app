@@ -154,12 +154,18 @@ input[type="submit"] {
 }
 
 .weather-forecast-icon {
-  font-size: 32px;
+  width: 100%;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-forecast-icon img {
+  width: 60px;
 }
 
 .weather-forecast-temp {
-  font-size: 16px;
+  font-size: 14px;
   display: flex;
   gap: 6px;
   justify-content: center;
